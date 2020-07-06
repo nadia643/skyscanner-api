@@ -2,11 +2,12 @@ require('dotenv').config();
 console.log(process.env);
 
 function fetchData() {
+
 	fetch("https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/SFO-sky/JFK-sky/2020-08-01?inboundpartialdate=2020-08-08", {
 	"method": "GET",
 	"headers": {
 		"x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
-		"x-rapidapi-key": "51fec1ec7fmsh9d2c7c699d329cfp145bafjsnbcabe15cfd2f"
+		"x-rapidapi-key": API_KEY
 	}
 })
 .then(response => {
